@@ -9,11 +9,12 @@ if __name__ == "__main__":
     if numarg == 0:
         print("0 arguments.")
 
-    elif numarg == 1:
-        print("1 argument:".format(numarg))
-
     else:
-        print("{} arguments:".format(numarg))
+        if numarg == 1:
+            print("1 argument:")
+
+        else:
+            print("{} arguments:")
 
         for index in range(numarg):
             print("{:d}: {}".format(index + 1, sys.argv[index + 1]))
