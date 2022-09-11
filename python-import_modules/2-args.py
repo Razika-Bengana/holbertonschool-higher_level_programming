@@ -4,17 +4,17 @@ if __name__ == "__main__":
 
     import sys
 
-    numarg = len(sys.argv) - 1
+    numargs = len(sys.argv)
 
-    if numarg == 0:
+    if numargs <= 1:
         print("0 arguments.")
 
     else:
-        if numarg == 1:
-            print("1 argument:")
+        if numargs == 2:
+            print("{:d} argument:".format(numargs - 1))
 
         else:
-            print("{} arguments:")
+            print("{:d} arguments:".format(numargs - 1))
 
-        for index in range(numarg):
-            print("{:d}: {}".format(index + 1, sys.argv[index + 1]))
+        for index in range(1, numargs):
+            print("{:d}: {}".format(index, sys.argv[index]))
