@@ -8,5 +8,5 @@ if __name__ == "__main__":
 
     for name in comp_names:
 
-        if comp_names[:2] != "__":
-            print(comp_names)
+        if name[:2] != "__":
+            print(name)
