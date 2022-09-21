@@ -3,6 +3,3 @@
 class Square:
     """ create an empty class"""
     pass
-ob = Square()
-"""Displaying"""
-print(ob)
