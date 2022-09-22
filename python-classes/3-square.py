@@ -5,7 +5,7 @@
 class Square:
     """Square class"""
     def __init__(self, size=0):
-        """initialization of a new square"""
+        """class instantiation with option"""
         self.__size = size
         """define the private instance attribute size"""
         if type(size) is not int:
