@@ -43,7 +43,7 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 Test with b in another type than int:
->>> add_integer(1, school)
+>>> add_integer(1, int)
 Traceback (most recent call last):
 TypeError: b must be an integer
 
