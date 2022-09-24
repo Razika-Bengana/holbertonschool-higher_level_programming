@@ -29,18 +29,10 @@ Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
 
->>> say_my_name("Razika", ["school", "Hello"])
+>>> say_my_name("Razika", 3)
 Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
-
-
-
-Test with two arguments not strings:
->>> say_my_name(34, 19)
-Traceback (most recent call last):
-...
-TypeError: first_name must be a string
 
 
 
