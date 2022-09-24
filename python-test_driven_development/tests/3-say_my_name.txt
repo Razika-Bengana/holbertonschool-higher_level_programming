@@ -7,13 +7,11 @@ test with the command python3 -m doctest -v ./tests/3-say_my_name.txt
 
 ============================================================================
 SUCCESS CASES:
-Test for two strings given:
+
+Test for the 2 arguments given:
+
 >>> say_my_name("First name", "Last name")
 My name is First name Last name
-
-Test for one string given:
->>> say_my_name("Razika")
-My name is Razika
 
 
 
