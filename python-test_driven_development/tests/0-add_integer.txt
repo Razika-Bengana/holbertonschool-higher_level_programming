@@ -27,8 +27,8 @@ Test of one negative float and one signed int
 Test of one positive float and one unsigned int
 >>> add_integer(2.5, 4)
 6
-============================================================================
-============================================================================
+
+
 
 CASES ON FAILURE:
 
@@ -40,7 +40,7 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 TypeError: a must be an integer
 
->>> add_integer 1, 1
+>>> add_integer 1
 Syntax error: invalid syntax
 
 >>> add_integer(2, 4, 6, 8)
