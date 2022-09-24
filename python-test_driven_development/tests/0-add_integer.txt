@@ -33,7 +33,11 @@ Test of one positive float and one unsigned int
 CASES ON FAILURE:
 
 Test with a in another type than int:
->>> add_integer(int, 2)
+>>> add_integer(None, 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer("school", 3)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
@@ -43,7 +47,7 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 Test with b in another type than int:
->>> add_integer(1, int)
+>>> add_integer(1, "school")
 Traceback (most recent call last):
 TypeError: b must be an integer
 
