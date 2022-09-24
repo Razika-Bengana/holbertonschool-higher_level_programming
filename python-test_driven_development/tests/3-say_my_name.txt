@@ -13,12 +13,16 @@ Test for the 2 arguments given:
 >>> say_my_name("First name", "Last name")
 My name is First name Last name
 
+Test for 1 argument given:
+>>> say_my_name("Razika")
+My name is Razika
+
 
 
 
 CASES ON FAILURE:
 
-Test with one argument not a string:
+Test with 1 argument not a string:
 
 >>> say_my_name(12345, "Razika")
 Traceback (most recent call last):
@@ -29,6 +33,14 @@ TypeError: first_name must be a string
 Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
+
+
+
+Test with two arguments not strings:
+>>> say_my_name(34, 19)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
 
 
 
