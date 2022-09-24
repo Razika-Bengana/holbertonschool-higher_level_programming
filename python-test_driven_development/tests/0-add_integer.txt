@@ -1,0 +1,51 @@
+# test the function ``add_integer``
+test with the command python3 -m doctest -v ./tests/0-add_integer.txt
+
+============================================================================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+============================================================================
+SUCCESS CASES:
+
+Test of two unsigned int
+>>> add_integer(4, 5)
+9
+
+Test of one signed int and one unsigned int
+>>> add_integer(-3, 6)
+3
+
+Test of two signed int
+>>> add_integer(-2, -4)
+-6
+
+Test of one negative float and one signed int
+>>> add_integer(-1.5, -1)
+-2
+
+Test of one positive float and one unsigned int
+>>> add_integer(2.5, 4)
+6
+============================================================================
+CASES ON FAILURE:
+
+>>> add_integer(Holberton, 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(None, None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer 1, 1
+Syntax error: invalid syntax
+
+>>> add_integer(2, 4, 6, 8)
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 4 were given
+
+>>> add_integer(float("inf"), 5)
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
