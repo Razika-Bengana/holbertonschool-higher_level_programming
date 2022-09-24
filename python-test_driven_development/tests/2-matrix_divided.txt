@@ -1,0 +1,83 @@
+# test the function ``matrix_divided``
+test with the command python3 -m doctest -v ./tests/2-matrix_divided.txt
+
+============================================================================
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+============================================================================
+SUCCESS CASES:
+
+>>> matrix_divided([1, 2, 3], 2)
+[0.5, 1.0, 1.5]
+
+>>> matrix_divided([-3, -6.3], 3)
+[-1, -2.1]
+
+>>> matrix_divided([float('inf')], float('inf'))
+[NaN]
+
+>>> matrix_divided([2, 3, 7], float('inf'))
+[0.0, 0.0, 0.0]
+
+
+
+
+CASES ON FAILURE:
+
+Test for matrix not a list of lists of integers or floats:
+
+>>>matrix_divided(2, 5)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>>matrix_divided(["holberton", "school"], 9)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+
+Test for rows of the matrix not at the same size:
+
+>>>matrix_divided([2, 3, 4], [2], 1)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+
+
+Test for div not a number:
+
+>>>matrix_divided([4, 5, 7.5], "school")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+
+
+Test for div equal to 0:
+
+>>>matrix_divided([6, 7, 8], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+
+
+Test for div not created:
+
+>>>matrix_divided([2, 5, 7], [6, 7, 8])
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+
+
+Test for matrix with no argument:
+
+>>>matrix_divided()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
