@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""define a matrix division function"""
+
+
 def add_integer(a, b=98):
     """return the sum of two integers,\
     otherwise an error if arguments are not int or float"""
