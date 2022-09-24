@@ -28,9 +28,11 @@ Test of one positive float and one unsigned int
 >>> add_integer(2.5, 4)
 6
 ============================================================================
+============================================================================
+
 CASES ON FAILURE:
 
->>> add_integer(Holberton, 2)
+>>> add_integer(int, 2)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
