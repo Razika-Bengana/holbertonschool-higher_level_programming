@@ -13,10 +13,6 @@ Test for the 2 arguments given:
 >>> say_my_name("First name", "Last name")
 My name is First name Last name
 
-Test for 1 argument given:
->>> say_my_name("Razika")
-My name is Razika
-
 
 
 
