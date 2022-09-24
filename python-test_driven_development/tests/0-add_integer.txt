@@ -37,7 +37,7 @@ Test with a in another type than int:
 Traceback (most recent call last):
 TypeError: a must be an integer
 
->>> add_integer("school", 3)
+>>> add_integer([2, 4], 3)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
@@ -63,7 +63,7 @@ Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
 
 Test with float NaN (Not a Number):
->>> add_integer(float("NaN"))
+>>> add_integer(float("NaN"), 8)
 Traceback (most recent call last):
 ...
 ValueError: cannot convert float NaN to integer
