@@ -32,27 +32,33 @@ Test of one positive float and one unsigned int
 
 CASES ON FAILURE:
 
+Test with a in another type than int:
 >>> add_integer(int, 2)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
+Test with no argument:
 >>> add_integer(None)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
+Test with b in another type than int:
 >>> add_integer(1, school)
 Traceback (most recent call last):
 TypeError: b must be an integer
 
+Test with more arguments than required:
 >>> add_integer(2, 4, 6, 8)
 Traceback (most recent call last):
 ...
 TypeError: add_integer() takes from 1 to 2 positional arguments but 4 were given
 
+Test with an infinite number:
 >>> add_integer(float("inf"), 5)
 Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
 
+Test with float NaN (Not a Number):
 >>> add_integer(float("NaN"))
 Traceback (most recent call last):
 ...
