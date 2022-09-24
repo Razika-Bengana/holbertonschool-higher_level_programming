@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""define a matrix division function"""
+"""define a function that adds 2 integers"""
 
 
 def add_integer(a, b=98):
