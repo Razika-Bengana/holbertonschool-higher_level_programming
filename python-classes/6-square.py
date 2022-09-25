@@ -44,15 +44,14 @@ class Square:
 
     def area(self):
         """Public instance method that returns the current square area"""
-        return (self.__size)**2
+        return (self.__size * self.__size)
 
     def my_print(self):
         """Public instance method that prints in stdout the square with #"""
-        if (self.__size) == 0:
+        if (self.__size):
+            for i in range(self.__position[1]):
+                print()
+            for k in range(self.__size):
+                print('{}{}'.format(' ' * self.position[0], '#' * self.__size))
+        else:
             print()
-            return
-        [print("") for i in range(0, self.__position[1])]
-        for i in range(0, self.__size):
-            [print(" ", end="") for a in range(0, self.__position[0])]
-            [print("#", end="") for b in range(0, self.__size)]
-            print("")
