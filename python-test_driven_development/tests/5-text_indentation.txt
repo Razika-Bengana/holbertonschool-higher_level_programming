@@ -10,11 +10,10 @@ SUCCESS CASES:
 
 Test string
 
->>> text_indentation("Hi everyone! This is an exercise made with Python language.")
+>>> text_indentation("Hi everyone! This is an exercise made with Python.")
 Hi everyone!
 <BLANKLINE>
-This is an exercise made with Python language.
-<BLANKLINE>
+This is an exercise made with Python.
 
 >>> text_indentation("School")
 School
