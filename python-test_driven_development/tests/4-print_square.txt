@@ -13,7 +13,7 @@ Test with size as integer and > 0
 >>> print_square(0)
 
 
->>>print_square(7)
+>>> print_square(7)
 #####
 #####
 #####
