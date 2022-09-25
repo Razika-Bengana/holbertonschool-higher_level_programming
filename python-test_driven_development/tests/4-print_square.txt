@@ -36,15 +36,6 @@ ValueError: size must be >= 0
 
 
 
-Test with size as a float and size less than 0
-
->>> print_square(-3.1)
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
-
-
-
 Test with another type than int
 
 >>> print_square("C")
