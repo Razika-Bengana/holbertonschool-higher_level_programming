@@ -6,13 +6,13 @@ def matrix_divided(matrix, div):
     """Divide all elements of a matrix"""
     if len(matrix) == 0:
         raise TypeError("matrix must be a matrix (list of lists)\
-of integers/floats")
+ of integers/floats")
     if all(isinstance(elements, list) for elements in matrix) is False:
         raise TypeError("matrix must be a matrix (list of lists)\
-of integers/floats")
+ of integers/floats")
     if len(matrix[0]) == 0:
         raise TypeError("matrix must be a matrix (list of lists)\
-of integers/floats")
+ of integers/floats")
     length = len(matrix[0])
     for row in matrix:
         if len(row) != length:
@@ -20,7 +20,7 @@ of integers/floats")
         for col in row:
             if not isinstance(col, (int, float)):
                 raise TypeError("matrix must be a matrix (list of lists)\
-of integers/floats")
+ of integers/floats")
     if not isinstance(div, int) and not isinstance(div, float):
         raise TypeError("div must be a number")
     if div == 0:
