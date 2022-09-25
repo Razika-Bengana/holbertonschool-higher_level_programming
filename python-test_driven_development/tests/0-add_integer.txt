@@ -44,7 +44,7 @@ TypeError: a must be an integer
 
 Test with a in another type than int
 
->>> add_integer([2, 4], 2)
+>>> add_integer("hello", 2)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
