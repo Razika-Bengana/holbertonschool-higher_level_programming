@@ -41,17 +41,17 @@ class TestMaxInteger(unittest.TestCase):
         result = max_integer(l)
         self.assertEqual(result, -1)
 
-    def test_strings(self):
-        """Test with a list of strings: it should raise a TypeError exception"""
-        l = ["holberton", "yes"]
-        result = max_integer(l)
-        self.assertRaises(TypeError, max_integer, l)
-
     def test_unique(self):
         """Test with one int in list: it should return the value of this int"""
         l = [76]
         result = max_integer(l)
         self.assertEqual(result, 76)
+
+    def test_identical(self):
+        """Test with a list of identical values: should return the value"""
+        l = [5, 5, 5, 5, 5]
+        result = max_integer(l)
+        self.assertEqual(result, 5)
 
     if __name__ == '__main__':
         unittest.main()
