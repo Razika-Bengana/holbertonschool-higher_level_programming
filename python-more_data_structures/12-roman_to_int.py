@@ -3,17 +3,11 @@ def roman_to_int(roman_string):
     if type(roman_string) is not str or roman_string is None:
         return 0
     roman = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
-    i = 0
-    result = 0
-    while i < len(roman_string):
-        if i < len(roman_string) - 1:
-            if roman[roman_string[i]] < roman[roman_string[i + 1]]:
-                result += roman[roman_string[i + 1]] - roman[roman_string[i]]
-                i += 2
-            else:
-                result += roman[roman_string[i]]
-                i += 1
+    rom_num = 0
+    for j in range(len(roman_string)):
+        if j > 0 and roman[roman_string[j]] > roman[roman_string[j - 1]]:
+            rom_num += roman[roman_string[j]] - 2 * \
+                        roman[roman_string[j - 1]]
         else:
-            result += roman[roman_string[i]]
-            i += 1
-            return result
+            rom_num += roman[roman_string[j]]
+    return rom_num
