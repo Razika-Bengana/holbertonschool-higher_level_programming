@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""function that prints a square with the character #"""
+"""define a function that prints a square with the character #"""
 
 
 def print_square(size):
+    """print a square with # and size as the length of the square"""
     if type(size) is not int:
         raise TypeError("size must be an integer")
     if type(size) is float and size < 0:
