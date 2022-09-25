@@ -64,24 +64,6 @@ TypeError: a must be an integer
 
 
 
-Test with None argument
-
->>> add_integer(None)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
-
-
-
-Test with no argument
-
->>> add_integer()
-Traceback (most recent call last):
-...
-TypeError: add_integer() missing 1 required positional argument: 'a'
-
-
-
 Test with b in another type than int
 
 >>> add_integer(1, "school")
