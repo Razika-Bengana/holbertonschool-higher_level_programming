@@ -10,8 +10,8 @@ SUCCESS CASES:
 
 Test string
 
->>> text_indentation("Hi everyone! This is: an exercise made with Python")
-Hi everyone!
+>>> text_indentation("Hi everyone? This is: an exercise made with Python")
+Hi everyone?
 <BLANKLINE>
 This is:
 <BLANKLINE>
