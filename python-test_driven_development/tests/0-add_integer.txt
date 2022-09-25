@@ -65,6 +65,15 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 
 
 
+Test with missing one argument
+
+>>> add_integer(2)
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+
+
 Test with b in another type than int
 
 >>> add_integer(1, "school")
