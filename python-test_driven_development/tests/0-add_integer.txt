@@ -9,22 +9,35 @@ test with the command python3 -m doctest -v ./tests/0-add_integer.txt
 SUCCESS CASES:
 
 Test of two unsigned int
+
 >>> add_integer(4, 5)
 9
 
+
+
 Test of one signed int and one unsigned int
+
 >>> add_integer(-3, 6)
 3
 
+
+
 Test of two signed int
+
 >>> add_integer(-2, -4)
 -6
 
+
+
 Test of one negative float and one signed int
+
 >>> add_integer(-1.5, -1)
 -2
 
+
+
 Test of one positive float and one unsigned int
+
 >>> add_integer(2.5, 4)
 6
 
@@ -51,23 +64,18 @@ TypeError: a must be an integer
 
 
 
-Test with no argument
+Test with None argument
 
 >>> add_integer(None)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+
+
+Test with no argument
+
 >>> add_integer()
-Traceback (most recent call last):
-...
-TypeError: add_integer() missing 1 required positional argument: 'a'
-
-
-
-Test with missing one argument
-
->>> add_integer(2)
 Traceback (most recent call last):
 ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
