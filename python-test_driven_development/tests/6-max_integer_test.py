@@ -42,10 +42,10 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(result, -1)
 
     def test_strings(self):
-        """Test with a list of strings: it should return the first string"""
+        """Test with a list of strings: it should raise a TypeError exception"""
         l = ["holberton", "yes"]
         result = max_integer(l)
-        self.assertEqual(result, "holberton")
+        self.assertRaises(TypeError, max_integer, l)
 
     def test_unique(self):
         """Test with one int in list: it should return the value of this int"""
