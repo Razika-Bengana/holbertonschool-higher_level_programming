@@ -51,14 +51,10 @@ class Square:
 
     def my_print(self):
         """Public instance method that prints in stdout the square with #"""
-        if self.size == 0:
-            print()
-        else:
+        if self.__size:
             for i in range(self.__position[1]):
                 print()
-            for i in range(0, self.size):
-                for k in range(self.position[0]):
-                    print(" ", end='')
-                for j in range(self.size):
-                    print("#", end='')
+            for j in range(self.__size):
+                print('{}{}'.format(' ' * self.position[0], '#' * self.__size))
+            else:
                 print()
