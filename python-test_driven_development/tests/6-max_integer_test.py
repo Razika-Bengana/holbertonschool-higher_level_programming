@@ -5,21 +5,53 @@ import unittest
 max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
-    """def test"""
-    def test_max_integer(self):
-        """create test_max_integer:funtion value
-        """
-        self.assertEqual(max_integer([2, 3, 6]), 5)
-        self.assertEqual(max_integer([3, 5, 7]), 6)
-        self.assertEqual(max_integer([9, 3, 2]), 9)
-        self.assertEqual(max_integer([3]), 3)
-        self.assertEqual(max_integer([-3, -2, -5]), -2)
-        self.assertEqual(max_integer([]), None)
-        self.assertNotEqual(max_integer([3, 7, 5]), 8)
-        self.assertNotIn(max_integer([5, 4, 9], [9, 4, 6])
-        self.assertIsInstance(max_integer([2, 4, 6]), int)
-        self.assertTrue(max_integer([5, 4, 8]), int)
-        self.assertFalse(max_integer([0, 0, 0]), False)
+    """test cases for the max_integer function"""
 
-        if __name__ == '__main__':
-            unittest.main()
+    def test_max_integer(self):
+        """Test with a list of integer: it should return the max"""
+        l = [1, 2, 3, 5, 7]
+        result = max_integer(l)
+        self.assertEqual(result, 7)
+
+    def test_empty(self):
+        """Test with an empty list: it should return None"""
+        l = []
+        result = max_integer(l)
+        self.assertEqual(result, None)
+
+    def test_none(self):
+        """Test with None: it should raise a TypeError"""
+        self.assertRaises(TypeError, max_integer, None)
+
+    def test_not_int(self):
+        """Test with a list of non-ints and ints:
+        it should raise a TypeError exception"""
+        l = ["c", "z", 9]
+        self.assertRaises(TypeError, max_integer, l)
+
+    def test_float(self):
+        """Test with a list of ints and floats: it should return the max"""
+        l = [2, 3.5, 1]
+        result = max_integer(l)
+        self.assertEqual(result, 3.5)
+
+    def test_negative(self):
+        """Test with a list of negative values: it should return the max"""
+        l = [-3, -7, -1]
+        result = max_integer(l)
+        self.assertEqual(result, -1)
+
+    def test_strings(self):
+        """Test with a list of strings: it should return the first string"""
+        l = ["holberton", "yes"]
+        result = max_integer(l)
+        self.assertEqual(result, "holberton")
+
+    def test_unique(self):
+        """Test with one int in list: it should return the value of this int"""
+        l = [76]
+        result = max_integer(l)
+        self.assertEqual(result, 76)
+
+    if __name__ == '__main__':
+        unittest.main()
