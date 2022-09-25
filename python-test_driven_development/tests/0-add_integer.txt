@@ -8,6 +8,12 @@ test with the command python3 -m doctest -v ./tests/0-add_integer.txt
 ============================================================================
 SUCCESS CASES:
 
+Test with one argument int
+>>> add_integer(10)
+108
+
+
+
 Test of two unsigned int
 
 >>> add_integer(4, 5)
