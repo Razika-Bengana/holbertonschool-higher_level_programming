@@ -41,7 +41,7 @@ Test with 1 argument:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("int")
-Traceback (most recent call last:
+Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
@@ -51,7 +51,7 @@ Test with no argument:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator()
-Traceback (most recent call last:
+Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
@@ -61,7 +61,7 @@ Test with None:
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("none", None)
-Traceback (most recent call lasst:
+Traceback (most recent call last):
 ...
 TypeError: none must be an integer
 
