@@ -124,6 +124,16 @@ TypeError: tuple must be an integer
 
 
 
+Test with a dict:
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", {1, 2})
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+
+
 Test with True:
 
 >>> bg = BaseGeometry()
