@@ -3,6 +3,7 @@
 
 
 class MyList(list):
+    """define the subclass of 'list'"""
     pass
 
 
