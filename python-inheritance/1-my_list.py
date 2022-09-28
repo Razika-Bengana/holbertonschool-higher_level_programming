@@ -3,10 +3,9 @@
 
 
 class MyList(list):
-    """make a class 'MyList' that inherits from 'list'"""
     pass
 
 
-def print_sorted(self):
-    """public instance method that prints the list in sorted order"""
-    print(sorted(self))
+    def print_sorted(self):
+        """public instance method that prints the list in sorted order"""
+        print(sorted(self))
