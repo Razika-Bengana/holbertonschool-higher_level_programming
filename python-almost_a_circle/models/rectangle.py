@@ -97,3 +97,10 @@ class Rectangle(Base):
         """ overriding the __str__ method """
         Id, x, y, wid, hei = self.id, self.x, self.y, self.width, self.height
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(Id, x, y, wid, hei))
+
+    def update(self, *args):
+        """ public method that assigns an argument to each attribute """
+        if len(args) != 0:
+            attributes = ["id", "width", "height", "x", "y"]
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
