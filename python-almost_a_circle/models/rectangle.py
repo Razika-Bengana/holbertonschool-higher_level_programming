@@ -37,7 +37,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """set value of height"""
+        """ set value of height """
         self.__height = value
         if type(value) != int:
             raise TypeError("height must be an integer")
@@ -52,7 +52,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """set value of x"""
+        """ set value of x """
         self.__x = value
         if type(value) != int:
             raise TypeError("x must be an integer")
@@ -67,9 +67,15 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """set value of y"""
+        """ set value of y """
         self.__y = value
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
+
+    def area(self):
+        """
+        Public method that returns the area value of the Rectangle instance
+        """
+        return self.__width * self.__height
