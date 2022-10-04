@@ -13,3 +13,47 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
+    @property
+    def width(self):
+        """ private instance attribute of width """
+        """ get the value of width """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """ set the value of width """
+        self.__width = value
+
+    @property
+    def height(self):
+        """ private instance attribute of height """
+        """ get the value of height """
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """set value of height"""
+        self.__height = value
+
+    @property
+    def x(self):
+        """ private instance attribute of x """
+        """ get the value of x """
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """set value of x"""
+        self.__x = value
+
+    @property
+    def y(self):
+        """ private instance attribute of y """
+        """ get the value of y """
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """set value of y"""
+        self.__y = value
