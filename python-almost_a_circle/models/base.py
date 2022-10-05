@@ -45,3 +45,14 @@ class Base:
                 list_of_dic.append(cls.to_dictionary(element))
         with open(n_file, mode="w", encoding='utf-8') as my_file:
             my_file.write(cls.to_json_string(list_of_dic))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+            static method that returns the list of the JSON string
+            representation json_string
+        """
+        if json_string is None or json_string == "":
+            return []
+        else:
+            return json.loads(json_string)
