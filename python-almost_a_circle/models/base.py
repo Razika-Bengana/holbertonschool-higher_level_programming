@@ -5,6 +5,7 @@ of the other classes in this project
 """
 import json
 
+
 class Base:
     """ define this class """
     __nb_objects = 0
@@ -24,7 +25,7 @@ class Base:
             static method that returns the JSON string
             representation of list_dictionaries
         """
-        if list_dictionaries is None:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
