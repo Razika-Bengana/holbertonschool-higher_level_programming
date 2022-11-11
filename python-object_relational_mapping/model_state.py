@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defines the city class
+Defines the State class
 """
 
 from sqlalchemy import Column, Integer, String
